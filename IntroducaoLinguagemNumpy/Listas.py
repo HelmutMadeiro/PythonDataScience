@@ -66,30 +66,16 @@ print(Acessorios_3)
 print(Acessorios_2)
 print(Acessorios)
 
+estaNalista = 'Rodas de liga' in Acessorios
+if estaNalista == True:
+    print('Esta na lista')
+else:
+    print('nao esta na lista')
 
+estaNalista = '4 x4' not in Acessorios
+if estaNalista == True:
+    print('Esta na lista')
+else:
+    print('nao esta na lista')
 
-
-
-
-
-
-
-
-
-
-
-
-
-#estaNalista = 'Rodas de liga' in Acessorios
-#if estaNalista == True:
-#    print('Esta na lista')
-#else:
- #   print('nao esta na lista')
-
-#estaNalista = '4 x4' not in Acessorios
-#if estaNalista == True:
-  #  print('Esta na lista')
-#else:
-   # print('nao esta na lista')
-
-#print('Existem {}'.format(len(A + B)), 'Dentro dessa lista que são ', A + B)
+print('Existem {}'.format(len(A + B)), 'Dentro dessa lista que são ', A + B)
