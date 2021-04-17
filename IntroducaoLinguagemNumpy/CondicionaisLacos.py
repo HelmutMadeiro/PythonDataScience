@@ -106,8 +106,12 @@ alturas =[1.9, 1.53, 1.75]
 imc = []
 for peso in pesos:
     for altura in alturas:
-        imcs = peso / altura ** 2
-    imc.append(imcs)
+    imcs = peso / altura ** 2
+    print(altura)
+
+
+
+imc.append(imcs)
 
 print (imc)
 
