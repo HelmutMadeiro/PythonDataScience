@@ -103,11 +103,6 @@ for lista in dados:
 pesos = [106.0, 68.5, 75.0]
 alturas =[1.9, 1.53, 1.75]
 
-imc = []
-for peso in pesos:
-    for altura in alturas:
-    imcs = peso / altura ** 2
-    print(altura)
 
 
 

@@ -18,6 +18,7 @@ dados = [
 dados
 
 
+
 # importação de um txt
 km = np.loadtxt(fname = 'data\carros-km.txt',dtype = int)
 print (km)
@@ -43,7 +44,6 @@ print (idade)
 km_media = km / idade
 print(km_media)
 
-
 dados = np.array([km,anos])
 
 print(dados,'teste' )
@@ -52,12 +52,15 @@ print(dados,'teste' )
 km_media = dados[0] / (2019 - dados[1])
 print(km_media)
 
+dados_new = dados.copy()
+dados_new
+
+dados_new.resize((3, 5))
 
 
+dados_new.resize((3, 5), refcheck=False)
+dados_new
 
 
-
-
-
-
-
+dados_new[2] = dados_new[0] / (2019 - dados_new[1])
+dados_new
