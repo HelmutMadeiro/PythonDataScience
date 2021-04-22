@@ -1,16 +1,9 @@
-# This is a sample Python script.
+import pandas as pd
+pd.set_option('display.max_rows',10)
+pd.set_option('display.max_columns',100)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+dataset = pd.read_csv ('dados/db.csv',sep =';')
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(dataset.dtypes)
+print(dataset.info())
+print(dataset[['Quilometragem','Valor']].describe())
