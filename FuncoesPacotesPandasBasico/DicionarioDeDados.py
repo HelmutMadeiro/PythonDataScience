@@ -49,5 +49,27 @@ dados = {
     }
 }
 
+dados = {'Jetta Variant': 88078.64, 'Passat': 106161.94, 'Crossfox': 72832.16}
 
+#atualiza o dicionario
+dados.update({'Passat':106161.95,'Fusca': 150000,'DS5': 124549.07})
+
+#faz uma copia e aloca em outra parte da memoria
+dadosCopy = dados.copy()
+
+#deleta o que colocar na chave
+del dadosCopy['Fusca']
+print(dadosCopy)
+print(dados)
+
+#deleta do dicionado e exibe oque foi elimidado
+dadosCopy.pop('Passat')
+
+#deleta do dicionado e exibe oque foi elimidado, caso nao econtre exibe o segundo paramentro
+dadosCopy.pop('Passat','Chave nao encontrada')
+print(dadosCopy)
+
+# limpa o dicionario
+dadosCopy.clear()
+print(dadosCopy)
 
