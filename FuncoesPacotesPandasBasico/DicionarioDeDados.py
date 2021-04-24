@@ -59,17 +59,49 @@ dadosCopy = dados.copy()
 
 #deleta o que colocar na chave
 del dadosCopy['Fusca']
-print(dadosCopy)
-print(dados)
+#print(dadosCopy)
+#print(dados)
 
 #deleta do dicionado e exibe oque foi elimidado
 dadosCopy.pop('Passat')
 
 #deleta do dicionado e exibe oque foi elimidado, caso nao econtre exibe o segundo paramentro
 dadosCopy.pop('Passat','Chave nao encontrada')
-print(dadosCopy)
+#print(dadosCopy)
 
 # limpa o dicionario
 dadosCopy.clear()
-print(dadosCopy)
+#print(dadosCopy)
 
+dados = {'Crossfox': 72832.16, 'DS5': 124549.07,  'Fusca': 150000,  'Jetta Variant': 88078.64,  'Passat': 106161.95}
+
+#retona uma lista contendo as chaves do dicionaio
+
+#print(dados.keys())
+
+#for key in dados.keys():
+   # print(dados[key])
+
+#for item in dados.items():
+  #  print(item)
+
+#for key, value in dados.items():
+ #   print(key,value)
+
+#for key, value in dados.items():
+#    if value > 100000:
+ #       print(key)
+
+dados = {
+    'Crossfox': {'valor': 72000, 'ano': 2005},
+    'DS5': {'valor': 125000, 'ano': 2015},
+    'Fusca': {'valor': 150000, 'ano': 1976},
+    'Jetta': {'valor': 88000, 'ano': 2010},
+    'Passat': {'valor': 106000, 'ano': 1998}
+}
+
+#print(dados)
+
+for item in dados.items():
+    if(item[1]['ano'] >= 2000):
+        print(item[0])
