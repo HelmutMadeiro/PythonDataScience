@@ -6,6 +6,7 @@
 #como chave (key) e o segundo como valor (value).
 
 #dicionario = {key_1: value_1, key_2: value_2, ..., key_n: value_n}
+from typing import Dict, List, Union
 
 carros = ['Jetta Variant', 'Passat', 'Crossfox']
 carros
@@ -59,38 +60,37 @@ dadosCopy = dados.copy()
 
 #deleta o que colocar na chave
 del dadosCopy['Fusca']
-#print(dadosCopy)
-#print(dados)
+print(dadosCopy)
+print(dados)
 
 #deleta do dicionado e exibe oque foi elimidado
 dadosCopy.pop('Passat')
 
 #deleta do dicionado e exibe oque foi elimidado, caso nao econtre exibe o segundo paramentro
 dadosCopy.pop('Passat','Chave nao encontrada')
-#print(dadosCopy)
+print(dadosCopy)
 
 # limpa o dicionario
 dadosCopy.clear()
-#print(dadosCopy)
+print(dadosCopy)
 
 dados = {'Crossfox': 72832.16, 'DS5': 124549.07,  'Fusca': 150000,  'Jetta Variant': 88078.64,  'Passat': 106161.95}
 
 #retona uma lista contendo as chaves do dicionaio
+print(dados.keys())
 
-#print(dados.keys())
+for key in dados.keys():
+   print(dados[key])
 
-#for key in dados.keys():
-   # print(dados[key])
+for item in dados.items():
+    print(item)
 
-#for item in dados.items():
-  #  print(item)
+for key, value in dados.items():
+    print(key,value)
 
-#for key, value in dados.items():
- #   print(key,value)
-
-#for key, value in dados.items():
-#    if value > 100000:
- #       print(key)
+for key, value in dados.items():
+    if value > 100000:
+        print(key)
 
 dados = {
     'Crossfox': {'valor': 72000, 'ano': 2005},
@@ -100,8 +100,26 @@ dados = {
     'Passat': {'valor': 106000, 'ano': 1998}
 }
 
-#print(dados)
+print(dados)
 
 for item in dados.items():
     if(item[1]['ano'] >= 2000):
         print(item[0])
+
+dados = {'Crossfox': 72832.16, 'DS5': 124549.07,  'Fusca': 150000,  'Jetta Variant': 88078.64,  'Passat': 106161.95}
+
+valores = []
+for valor in dados.values():
+    valores.append(valor)
+
+print(valores)
+
+soma = 0
+
+for valor in dados.values():
+    soma += valor
+print(soma)
+
+# ou
+print(sum(dados.values()))
+
