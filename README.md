@@ -1,6 +1,6 @@
 # PythonDataScience
 esse repositorio serve como parte dos meus estudos em python voltados para datascience, aqui coloco o que estou aprendendo e algumas anotações. 
-Uso explusivo para aprendizado
+Uso exclusivo para aprendizado
 Aqui conta algumas aulas que tive e que estão em andamentos.
 
 Cursos 
